@@ -1,5 +1,6 @@
 package ru.clevertec.service;
 
+import lombok.AllArgsConstructor;
 import ru.clevertec.domain.Account;
 import ru.clevertec.entity.AccountEntity;
 import ru.clevertec.mapper.AccountMapper;
@@ -9,10 +10,11 @@ import ru.clevertec.repository.AccountRepository;
 import java.util.List;
 import java.util.UUID;
 
+@AllArgsConstructor
 public class AccountService {
-    private final AccountRepository accountRepository = new AccountRepository();
+    private final AccountRepository accountRepository;
 
-    private final AccountMapper accountMapper = new AccountMapperImpl();
+    private final AccountMapper accountMapper;
 
     public List<Account> getAccounts() {
         List<AccountEntity> accounts = accountRepository.getAccounts();
