@@ -3,14 +3,15 @@ package ru.clevertec.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import ru.clevertec.common.AccountType;
 import ru.clevertec.common.MyCurrency;
-
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Data
+@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Account {
