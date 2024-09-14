@@ -6,9 +6,11 @@ import ru.clevertec.entity.AccountEntity;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface AccountMapper {
     List<Account> toDomains(List<AccountEntity> accountEntities);
+
     Account toDomain(AccountEntity accountEntity);
+
     AccountEntity toEntity(Account account);
 }
